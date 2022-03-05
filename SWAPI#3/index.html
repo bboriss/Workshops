@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>SWAPI</title>
+  </head>
+  <body>
+    <div id="logo">
+      <img src="./download.png" alt="starwars-logo" />
+    </div>
+    <div id="pictures-container">
+      <div id="person_pic">
+        <img
+          id="person"
+          src="./starwars-person.jpg"
+          alt="starwars-person"
+          title="showPeopleTable"
+        />
+      </div>
+      <div id="spaceship_pic">
+        <img
+          id="spaceship"
+          src="./spaceship.jpg"
+          alt="starwars-person"
+          title="showSpaceshipTable"
+        />
+      </div>
+    </div>
+    <div id="buttons">
+      <button id="prevBtn" title="Previous Page">
+        <i class="fa-solid fa-circle-left"></i>
+      </button>
+      <button id="nextBtn" title="Next Page">
+        <i class="fa-solid fa-circle-right"></i>
+      </button>
+    </div>
+    <div id="table_container">
+      <table id="table">
+        <thead>
+          <tr id="thead"></tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
