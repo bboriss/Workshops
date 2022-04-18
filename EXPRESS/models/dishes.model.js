@@ -7,23 +7,28 @@ class DishesModel {
   getAllDishesItems() {
     return new Promise((resolve, reject) => {
       const dishesData = dataService.readDataFromDb(dishesPath);
-      resolve(JSON.parse(dishesData));
+
+      if (dishesData) {
+        resolve(JSON.parse(dishesData));
+      } else {
+        reject({
+          message: "Error! No dishes found!",
+        });
+      }
     });
   }
 
   getDishById(itemId) {
     return new Promise((resolve, reject) => {
       const dishesData = JSON.parse(dataService.readDataFromDb(dishesPath));
-
-      const foundItem = dishesData.find((item) => item.id === itemId);
+      const foundItem = dishesData.find((item) => item.id == itemId);
 
       if (foundItem) {
         resolve(foundItem);
-      } else {
-        reject({
-          message: "Error! No item found!",
-        });
       }
+      // if (typeof foundItem === "undefined") {
+      //   reject({ message: "No aparatents currently." });
+      // }
     });
   }
 
@@ -31,16 +36,15 @@ class DishesModel {
     return new Promise((resolve, reject) => {
       const dishesData = JSON.parse(dataService.readDataFromDb(dishesPath));
       if (dishObj.price < 1000) {
-        //Adding the item to the inventory array
         dishesData.push(dishObj);
-        //Saving the updated inventory in db
+        //Saving the updated dishes in db
         dataService.writeDataToDb(dishesPath, JSON.stringify(dishesData));
 
         resolve({
           message: "Item added successfully!",
         });
       } else {
-        reject({ message: "Item too expencive" });
+        reject({ message: "Item too expensive" });
       }
     });
   }

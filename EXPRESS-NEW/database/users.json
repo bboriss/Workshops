@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "username": "MihailBotvinik",
+    "password": "12345",
+    "isAdmin": true
+  },
+  {
+    "id": 2,
+    "username": "GariKasparov",
+    "password": "54321",
+    "isAdmin": false
+  },
+  {
+    "id": 3,
+    "username": "AleksandarAljehin",
+    "password": "32415",
+    "isAdmin": false
+  }
+]

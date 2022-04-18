@@ -11,8 +11,9 @@ router.get("/", async (req, res) => {
 
 router.get("/:id?", async (req, res) => {
   const dishId = req.params.id;
+
   if (dishId) {
-    const dishItem = await dishesController.getDishItem(dishId);
+    const dishItem = await dishesController.getItemById(dishId);
 
     res.send(dishItem);
   }
