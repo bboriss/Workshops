@@ -1,0 +1,14 @@
+[
+  { "id": "1", "username": "george", "password": "george123", "role": "user" },
+  { "id": "2", "username": "ivan", "password": "ivan123", "role": "admin" },
+  {
+    "id": "1d7ccdb7-1dcf-487b-bbcb-65afc26275c4",
+    "username": "boris",
+    "password": "$2a$10$90b6EjJoFojx3aC0/H92AeYCYloSiUD7l2w.c7XhpS04ixVCa/5tO"
+  },
+  {
+    "id": "f509b681-f39c-435d-bead-7d2ded7b2f7c",
+    "username": "someone",
+    "password": "$2a$10$zFtIrosVu0zLzn9xelb.g.l4tZU19YdRFRuvngAR9ABeBRknM08b."
+  }
+]

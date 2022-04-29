@@ -30,10 +30,9 @@ router.post("/login", (req, res) => {
       req.session.user = true;
 
       res.status(200).send({ message: "User is logged in" });
+    } else {
+      res.status(403).send({ message: "Bad credentials" });
     }
-    // else {
-    //   res.status(403).send({ message: "Bad credentials" });
-    // }
   });
 });
 
