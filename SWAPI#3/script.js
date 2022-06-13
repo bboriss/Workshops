@@ -9,6 +9,7 @@ let tBody = document.getElementById("tbody");
 let buttons = document.getElementById("buttons");
 
 // Memory
+// some random comment
 
 const memory = {
   urlPeople: "https://swapi.dev/api/people",
